@@ -23,17 +23,11 @@ services:
       - backend
 
   db:
-    image: mysql:5.7
-    container_name: mysql_db
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-    ports:
-      - "3306:3306"
+    image: python:3.9-slim
+    container_name: sqlite_db
+    command: tail -f /dev/null
     volumes:
-      - mysql_data:/var/lib/mysql
+      - ./database.sqlite3:/app/database.sqlite3
 
 volumes:
   mysql_data:
