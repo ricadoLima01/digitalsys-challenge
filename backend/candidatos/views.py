@@ -42,6 +42,7 @@ class ExperienciasViewSet(viewsets.ModelViewSet):
     http_method_names = ["get", "post"]
 
 class FormacoesAcademicasViewSet(viewsets.ModelViewSet):
+    queryset = FormacaoAcademica.objects.all()  # Adicione essa linha
     def get_queryset(self):
         return super().get_queryset().order_by("universidade")
     serializer_class = FormacaoAcademicaSerializer
