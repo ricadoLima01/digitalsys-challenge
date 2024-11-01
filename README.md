@@ -1,37 +1,22 @@
-# 📋 Documentação sobre a API
+**README.md**
 
-- 🛠️ Implementar uma API ou interface em Django para gerenciar os currículos.
+# API CANDIDATOS
 
-1.**📦 Models**:
+## Passo a Passo com Docker
+    1. Tenha o Docker e Docker-compose instalados na sua maquina
+    ```
+    docker-compose up -d
+    ```
+    2. Irá subir tanto o backend, frontend e bd
+        - Frontend: http://localhost:5173/
+        - Backend: http://localhost:8080/
+        - BD: em memória com sqlite3
 
-    - 👤**Dados Pessoais**: `id`, `nome`, `data de nascimento`.
 
-    - 📞**Contato**: `id`, `email`, `telefone`, `endereço`.
-
-    - 💼**Experiência Profissional**: `dadosPessoaisKey`, `ContatoKey`, `id` (cargo, empresa, período, descrição).
-
-    - 🎓**Formação Acadêmica**: `id`, `instituição`, `curso`, `período`.
-
-    - 📑**Currículo**: `id`, `DadosPessoais`, `Contato`, `ExperiênciaProfissional`, `FormaçãoAcadêmica`, `generatePDF`.
-
-2.**Controllers**:
-
-    - 👤**Dados Pessoais**:
-
-    ```json
-
-    {
-
-    "id": 1,
-
-    "nome": "João Silva",
-
-    "data_de_nascimento": "1990-01-01"
-
-    }
-
+## Configuração do backend API feita em Django RestFramework com modulo Djangoadmin
+    ```
+    cd backend/
+    cat README.MD or code README.MD
     ```
 
-    - 📞
-
-    -
+## Configuração do frontend com Vue.js e Javascript
